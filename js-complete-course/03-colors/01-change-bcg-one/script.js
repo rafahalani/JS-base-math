@@ -10,6 +10,25 @@
 // You will have time to focus on it later.
 
 (function() {
+    var red = document.querySelector('#red');
+    var green = document.querySelector('#green');
+    var yellow = document.querySelector('#yellow');
+    var blue = document.querySelector('#blue');
+
+
+    red.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'red';
+    });
+
+    green.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'green';
+    });
+    yellow.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'yellow';
+    });
+    blue.addEventListener('click', () => {
+        document.body.style.backgroundColor = 'blue';
+    });
 
     // your code here
 

@@ -15,7 +15,20 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+
+      var num =  parseInt(document.getElementById("number").value);
+
+
+        function factorialize(num) {
+            if (num === 0 || num === 1)
+                return 1;
+            for (var i = num - 1; i >= 1; i--) {
+                num *= i;
+            }
+            return num;
+        }
+
+        window.alert(factorialize(num));
 
     });
 

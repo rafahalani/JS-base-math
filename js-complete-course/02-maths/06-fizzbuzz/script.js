@@ -10,7 +10,24 @@
 // You will have time to focus on it later.
 
 (function() {
+    var sum = 0;
+function fizzBuzz ()
+{
+    for (var i = 100 - 1; i >= 1; i--)
+        sum = sum + i;
+    {
+        if ((i%3 === 0) && (i%5 === 0)console.log('FizzBuzz'));
+    else
+        if (i%3 === 0)console.log('Fizz');
+    else
+        if (i%5 === 0)console.log('Buzz');
+    else
+        return i;
+    }
 
+
+}
+return fizzBuzz(sum);
     // your code here
 
 })();
