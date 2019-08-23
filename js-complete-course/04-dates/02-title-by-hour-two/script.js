@@ -11,6 +11,19 @@
 
 (function() {
 
+
+    var hour = new Date().getHours();
+    var greeting;
+
+    if (hour < 17) {
+        greeting = "Good day";
+    }
+    else {
+        greeting = "Good evening";
+    }
+
+    console.log(greeting);
+    document.getElementById("target").innerHTML = greeting;
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
