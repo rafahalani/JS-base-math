@@ -27,7 +27,12 @@
         "raisin",
         "cerise",
     ];
+    document.getElementById('run').addEventListener('click',function () {
+        let dedup = [...new Set(fruits)];
+        console.log(dedup)
 
-    // your code here
-
+       /* uniqueArray = a.filter(function (item, pos, self) {
+            return self.indexOf(item) == pos;
+        });*/
+    });
 })();
