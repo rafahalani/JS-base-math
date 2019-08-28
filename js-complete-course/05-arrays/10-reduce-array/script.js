@@ -88,7 +88,11 @@
             age: 81,
         },
     ];
+    document.getElementById('run').addEventListener('click',function () {
 
-    // your code here
 
+        let ages = people.map(a => a.age);
+        console.log(ages.reduce((a, b) => a + b, 0));
+
+    });
 })();

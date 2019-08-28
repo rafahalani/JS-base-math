@@ -39,6 +39,16 @@
         },
     ];
 
-    // your code here
+     document.getElementById('run').addEventListener('click',function () {
+        var text = [];
+        people.forEach(getFirstname);
+
+        function getFirstname(item) {
+            text.push(item['firstname'])
+        }
+        console.log(text);
+
+
+    });
 
 })();

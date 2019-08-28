@@ -88,7 +88,15 @@
             age: 81,
         },
     ];
+    document.getElementById('run').addEventListener('click',function () {
 
-    // your code here
+    let
+     goodage= people.filter(agefilter => agefilter.age >18);//define variable goodage, define function agefilter
+    console.log(goodage);//get the result
+
+
+
+
+    });
 
 })();

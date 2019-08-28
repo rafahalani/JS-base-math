@@ -26,6 +26,13 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById('run').addEventListener('click',function () {
+
+        let test = fruits.includes("apple");
+        console.log(test);
+
+
+
+    });
 
 })();
