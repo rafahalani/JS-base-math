@@ -11,6 +11,19 @@
 
 (function() {
 
-    // your code here
+    const image = document.getElementsByTagName("img");
+
+    let kiss = image[0].getAttribute("data-hover");
+    let nokiss = image[0].getAttribute("src");
+
+    image[0].addEventListener("mouseover", function () {
+        image[0].src = kiss;
+    });
+
+    image[0].addEventListener("mouseout", function () {
+       image[0].src = nokiss;
+    });
+
+
 
 })();

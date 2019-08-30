@@ -10,6 +10,18 @@
 // You will have time to focus on it later.
 
 (function() {
+    var table ='';
+    var rows =10;
+    var cols=10;
+    for (var r = 0; r<rows;r++){
+        table +='<tr>';
+        for(var c=0;c<cols;c++){
+            table+='<td>' +''+'</td>';
+        }
+        table+='</tr>';
+    }
+    document.write("<table border=1>"+table+'</table>');
+
 
     // your code here
 

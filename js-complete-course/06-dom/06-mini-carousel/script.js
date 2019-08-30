@@ -19,6 +19,19 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    document.getElementById('next').addEventListener('click',function () {
 
+
+        let carousel = document.getElementsByTagName("img")[0];
+        let src = carousel.getAttribute("src");
+        let srcIndex = gallery.indexOf(src);
+        console.log(srcIndex+ " " + typeof(srcIndex));
+        if(srcIndex === gallery.length-1) {
+            srcIndex= 0;
+        } else {
+            srcIndex+= 1
+        }
+        // change the src with the newIndex
+        carousel.setAttribute("src", gallery[srcIndex] );
+    })
 })();

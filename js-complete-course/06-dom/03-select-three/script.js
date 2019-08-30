@@ -10,7 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
+    //var x = document.querySelectorAll(".target");
+    var highlightedItems = document.querySelectorAll(".target");
 
-    // your code here
+    highlightedItems.forEach(function(target) {
+        target.innerHTML="owned";
+    });
+/*
+    let targets = document.querySelectorAll(".target");
+    targets.forEach(element => { element.innerHTML = "owned";
+    });*/
 
 })();
