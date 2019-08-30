@@ -16,7 +16,7 @@
 (function () {
         var table ='';
         var rows =10;
-        var cols=8;
+        var cols=1;
         for (var r = 0; r<rows;r++){
             table +='<tr>';
             for(var c=0;c<cols;c++){
@@ -24,7 +24,7 @@
             }
             table+='</tr>';
         }
-        document.write("<table border=1>"+table+'</table>');
+        document.getElementById("target").innerHTML = "<table border=1>"+table+"</table>";
 
 
 })();

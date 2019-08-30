@@ -9,8 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
+(function () {
+    text = document.getElementById("target").textContent;
+    document.getElementById("target").innerHTML = "";
+    let chars = text.split(/(?!$)/u);
+    count = 0;
+    let min = 10;
+    let max = 300;
+    let random = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log(random);
+    let timer = setInterval(function () {
+        if (count == chars.length - 1) {
+            clearInterval(timer);
+        }
+        document.getElementById("target").innerHTML += chars[count++];
+    }, random);
 
 })();

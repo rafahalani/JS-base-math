@@ -29,8 +29,9 @@
                 window.alert("Please enter confirm password");
 
             // If Not same return False.
-            else*/ if (password1 != password2) {
+            else*/ if (password1 !== password2) {
 
+                    document.getElementById("pass-two").setAttribute("style", "border-color: red");
 
                 window.alert("\nPassword did not match: Please try again...");
             }

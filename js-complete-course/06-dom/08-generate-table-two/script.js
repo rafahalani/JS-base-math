@@ -14,15 +14,18 @@
     var rows =10;
     var cols=10;
     for (var r = 0; r<rows;r++){
+
         table +='<tr>';
         for(var c=0;c<cols;c++){
-            table+='<td>' +''+'</td>';
+            let newvar=r+1;
+            let newvar2 =c+1;
+
+
+                table+='<td>' +(newvar*newvar2)+'</td>';
         }
         table+='</tr>';
     }
-    document.write("<table border=1>"+table+'</table>');
-
-
+    document.getElementById("target").innerHTML = "<table border=1>"+table+"</table>";
     // your code here
 
 })();
