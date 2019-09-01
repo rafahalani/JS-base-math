@@ -11,6 +11,15 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("increment").addEventListener("click", function () {
+
+
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("target").innerHTML = localStorage.clickcount;
+    });
 
 })();

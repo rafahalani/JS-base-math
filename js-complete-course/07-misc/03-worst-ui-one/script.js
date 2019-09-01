@@ -11,6 +11,23 @@
 
 (function() {
 
-    // your code here
+
+    var slider = document.getElementById("slider");
+    var output = document.getElementById("target");
+
+
+    output.innerHTML = "0" + slider.value;
+    slider.oninput = function() {
+        output.innerHTML = "0" + this.value;
+    }
+
 
 })();
+//https://www.geeksforgeeks.org/creating-range-slider-html-using-javascript/
+//var rangeslider = document.getElementById("sliderRange");
+// var output = document.getElementById("demo");
+// output.innerHTML = rangeslider.value;
+//
+// rangeslider.oninput = function() {
+//   output.innerHTML = this.value;
+// }
