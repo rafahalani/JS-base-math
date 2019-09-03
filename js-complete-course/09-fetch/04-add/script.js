@@ -10,14 +10,29 @@
 // You will have time to focus on it later.
 
 (() => {
-    fetch("http://localhost:63342/js-complete-course/_shared/api.json")
+
+    document.getElementById("run").addEventListener("click",function () {//get the values from HTML
+
+        let heroName = document.getElementById("hero-name").value;
+        let heroalter = document.getElementById("hero-alter-ego").value;
+        let powers = document.getElementById("hero-powers").value;
+
+
+
+    fetch("http://localhost:63342/js-complete-course/_shared/api.json")//use json
         .then(function (response) {
             return response.json();
         })
+
+
+
+
         .then(function (data) {
-            console.log(data);
+                let newId = data.heroes.length +1;//calculate the newid
+                data.heroes.push({id: newIdd, name: heroName, alterEgo: heroalter, abilities: powers});//push the new values into heroes
 
-
-
-
+                console.log(data)
+        })
+    })
 })();
+
