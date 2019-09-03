@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-    document.getElementById("run").addEventListener("click",function () {
+
 
         fetch("http://localhost:63342/js-complete-course/_shared/api.json")
             .then(function (response) {
@@ -18,25 +18,30 @@
             })
             .then(function (data) {
                 console.log(data);
-                let i =[1,2,3,4,5]
-               let  temp = document.getElementById("tpl-hero");
-                let tempName = temp.content.querySelector(".name"); // search inside the template
+                let target =document.getElementById("target");//save the target
+                //let heroid =document.getElementById("hero-id");
+                let  temp = document.getElementById("tpl-hero");//save the template
+                let tempName = temp.content.querySelector(".name"); // take tha value inside the template class called name
+              //other way to do it use tag name : let tempName = tmp.content.querySelector("strong");
                 let tempAlter = temp.content.querySelector(".alter-ego");
                 let tempPowers = temp.content.querySelector(".powers");
 
-                //  console.log((data.heroes[i].name));
-                tempName.innerHTML= data.heroes[i].name;
-                tempAlter.innerHTML= data.heroes[i].alterEgo;
-                tempPowers.innerHTML= data.heroes[i].abilities;
+                document.getElementById("run").addEventListener("click", function () {
+
+                   let i = parseInt(document.getElementById("hero-id").value) -1;
+
+                    tempName.innerHTML = data.heroes[i].name;
+                    tempAlter.innerHTML = data.heroes[i].alterEgo;
+                    tempPowers.innerHTML = data.heroes[i].abilities;
 
 
-                let clone = temp.content.cloneNode(true);
-                document.getElementById("target").appendChild(clone);
+                    let clone = temp.content.cloneNode(true);
+                   target.appendChild(clone);
 
 
-
+                })
 
             })
-    })
+
     // your code here
 })();
