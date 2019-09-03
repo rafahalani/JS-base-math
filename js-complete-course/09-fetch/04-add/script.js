@@ -29,9 +29,9 @@
 
         .then(function (data) {
                 let newId = data.heroes.length +1;//calculate the newid
-                data.heroes.push({id: newIdd, name: heroName, alterEgo: heroalter, abilities: powers});//push the new values into heroes
+                data.heroes.push({id: newId, name: heroName, alterEgo: heroalter, abilities: powers});//push the new values into heroes
 
-                console.log(data)
+                console.log(data);
         })
     })
 })();
