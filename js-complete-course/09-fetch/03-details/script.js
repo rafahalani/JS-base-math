@@ -28,7 +28,7 @@
 
                 document.getElementById("run").addEventListener("click", function () {
 
-                   let i = parseInt(document.getElementById("hero-id").value) -1;
+                   let i = parseInt(document.getElementById("hero-id").value) -1;//id
 
                     tempName.innerHTML = data.heroes[i].name;
                     tempAlter.innerHTML = data.heroes[i].alterEgo;
