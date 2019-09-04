@@ -11,8 +11,20 @@
 
 (() => {
 
-function myCallback (error, articles() {
-    
-}    // your
-    //code here
+function myCallback (error, articles) {
+    console.log(articles);
+}
+
+document.getElementById("run").addEventListener("click",function () {
+    window.lib.getPosts(function (error,articles) {
+
+        console.log(articles);
+    })
+
+})
 })();
+/*The window.lib.getPosts() function is available in the script. It must receive a callback parameter.
+ After a short delay, the callback will be executed with two parameters:
+ the first contains an error (if there is one, otherwise null), the second an array of articles.
+ At the click of the button, call the getPosts function and display the items obtained in the console (the getPosts function never returns an error).
+ */
