@@ -9,39 +9,32 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function () {
 
-    var count = 0;
-    var txt = document.getElementById("target").innerHTML;
-    var speed = 50;
-    document.getElementById("target").innerHTML = "";
-    console.log(txt);
+(function() {
 
-    function typeWriter () {
+    var i = 0;
+    var container = document.getElementById("target");
+    var text = document.getElementById("target").innerHTML;
 
-            if (count< txt.length) {
-            document.getElementById("target").innerHTML += txt.charAt(count);
-            // charAt: displays the first character of the string
-            count++;
+    var splitText= text.split("");
+    container.innerHTML="";
+    var max = 5;
+    var min= 1;
+    var random = Math.random();
+   // var random = Math.floor(Math.random() * (max - min + 1) + min);
 
-     setTimeout(typeWriter, speed);
-     // setTimeout : method calls a function or evaluates an expression after a specified number of milliseconds
-   }
- }
- typeWriter();
-  /*  text = document.getElementById("target").textContent;
-    document.getElementById("target").innerHTML = "";
-    let chars = text.split(/(?!$)/u);
-    count = 0;
-    let min = 10;
-    let max = 300;
-    let random = Math.floor(Math.random() * (max - min + 1)) + min;
-    console.log(random);
-    let timer = setInterval(function () {
-        if (count == chars.length - 1) {
-            clearInterval(timer);
+
+    function typewriter() {
+        container.innerHTML  += splitText[i];
+        i++;
+
+        if (i < splitText.length){
+
+            setTimeout(typewriter, random * 1000);
         }
-        document.getElementById("target").innerHTML += chars[count++];
-    }, random); */
+
+    }
+    typewriter();
+
 
 })();
