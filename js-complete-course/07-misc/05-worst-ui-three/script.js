@@ -10,23 +10,69 @@
 // You will have time to focus on it later.
 
 (function() {
-    Array.from(document.getElementsByTagName('button')).forEach(function(element) {
-        element.addEventListener('click', function() {
-            var inputField = element.parentElement.getElementsByTagName('input')[0];
-            var rawMin = inputField.getAttribute('data-min');
-            var min = +rawMin;
-            var max = +(inputField.getAttribute('data-max'));
 
-            var randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
-            inputField.value = String(randomNumber).padStart(rawMin.length, 0);
+    var target = document.getElementById("target");
 
-            document.getElementById("target").innerHTML = "+0" +
-                document.getElementById('part-one').value +
-                document.getElementById('part-two').value +
-                document.getElementById('part-three').value +
-                document.getElementById('part-four').value;
-        });
+    var one = document.getElementById("part-one");
+    var two = document.getElementById("part-two");
+    var three = document.getElementById("part-three");
+    var four = document.getElementById("part-four");
+
+    var firstbutton = document.getElementById("fix-part-one");
+    var secondbutton = document.getElementById("fix-part-two");
+    var thirdbutton = document.getElementById("fix-part-three");
+    var fourthbutton = document.getElementById("fix-part-four");
+
+    var firstmin = one.dataset.min;
+    var firstmax = one.dataset.max;
+    var min = two.dataset.min;
+    var max = two.dataset.max;
+
+    firstmin = Math.ceil(firstmin);
+    firstmax = Math.floor(firstmax);
+    min = Math.ceil(min);
+    max = Math.floor(max);
+
+    var first = "460";
+    var second = "00";
+    var third = "00";
+    var fourth = "00";
+
+    target.innerHTML = "0" + first + second + third + fourth;
+
+
+    firstbutton.addEventListener("click", function(){
+
+        first = Math.floor(Math.random() * (firstmax - firstmin + 1)) + firstmin;
+        one.value = first;
+
+        target.innerHTML = "0" + first + second + third + fourth;
     });
-    // your code here
+
+    secondbutton.addEventListener("click", function(){
+
+        second = ("" + ("100" + Math.floor(Math.random() * (max - min + 1)) + min).slice(-3)).slice(0, 2);
+        two.value = second;
+
+        target.innerHTML = "0" + first + second + third + fourth;
+    });
+
+    thirdbutton.addEventListener("click", function(){
+
+        third = ("" + ("100" + Math.floor(Math.random() * (max - min + 1)) + min).slice(-3)).slice(0, 2);
+        three.value = third;
+
+        target.innerHTML = "0" + first + second + third + fourth;
+    });
+
+    fourthbutton.addEventListener("click", function(){
+
+        fourth = ("" + ("100" + Math.floor(Math.random() * (max - min + 1)) + min).slice(-3)).slice(0, 2);
+        four.value = fourth;
+
+        target.innerHTML = "0" + first + second + third + fourth;
+    });
+
+
 
 })();
